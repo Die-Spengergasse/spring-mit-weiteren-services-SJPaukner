@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  spring:
+    build: .
+    restart: "no"
+    ports:
+      - "80:8080"
+
+  postgresdb:
+    image: postgres
+    restart: always
+    environment:
+        POSTGRES_PASSWORD: example
